@@ -1,5 +1,66 @@
 .header
-	padding-bottom 40px
+	padding-top 12px
+	padding-bottom 20px
 
-	&__title
-		margin-bottom 20px
+	&__logo
+	&__search
+	&__list
+	&__right
+		padding-right 22px
+		display inline-block
+		vertical-align top
+
+	&__search-text
+		padding-top 17px
+		font-size 14px
+
+	&__list-item
+		padding-left 30px
+		padding-top 5px
+		padding-bottom 5px
+		position relative
+		font-size 16px
+		cursor pointer
+
+		&_question
+		&_call
+		&_partner
+			&::before
+				position absolute
+				top 3px
+				left 0
+				content ''
+
+		&_question
+			&::before
+				sprite($question_row)
+
+		&_call
+			&::before
+				sprite($call_row)
+
+		&_partner
+			&::before
+				sprite($partner_row)
+
+	&__right
+		padding-right 0
+
+	&__bascket
+		padding-left 63px
+		padding-top 10px
+		position relative
+		font-size 20px
+		&::before
+			position absolute
+			top 0
+			left 0
+			content ''
+			sprite($basket)
+
+	&__bascket-text
+		padding-top 15px
+		display inline-block
+		max-width 160px
+		font-size 11px
+		line-height 16px

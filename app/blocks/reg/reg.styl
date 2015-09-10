@@ -1,0 +1,37 @@
+.reg
+	height 31px
+	background-color #3a3a3c
+	color #fff
+	line-height 31px
+	clearfix()
+
+	&__left
+		float left
+
+	&__right
+		float right
+
+	&__phone,
+	&__mail
+		padding-left 40px
+		display inline-block
+		position relative
+		cursor pointer
+
+		&::before
+			position absolute
+			top 4px
+			left 8px
+			content ''
+
+	&__phone
+		font-weight 500
+		&::before
+			sprite($phone)
+
+	&__mail
+		&::before
+			sprite($mail)
+
+	&__enter-link
+		color #fff

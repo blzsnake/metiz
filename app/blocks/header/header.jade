@@ -1,16 +1,22 @@
-include ../logo/logo
-include ../dark/dark
-include ../title/title
-include ../description/description
+include ../input/input
 
 mixin header()
 	.header
-		+logo()
-
-		.header__title
-			+dark()
-				+title()
-					| CSSSR Project Template
-
-		+description()
-			| Шаблон проекта для быстрого старта.
+		.header__logo
+			img.header__logo-img(src='assets/images/logo_main.png')
+		.header__search
+			+input({
+				type: 'text',
+				name:'search',
+				place: 'Поиск..'})(class = 'input_search')
+			.header__search-text
+				| Можно ввести название или артикул
+		ul.header__list
+			.header__list-item.header__list-item_question Задать вопрос
+			.header__list-item.header__list-item_call Заказать звонок
+			.header__list-item.header__list-item_partner Стать партнером
+		.header__right
+			.header__bascket Корзина
+			.header__bascket-text
+				| В вашей корзине 2 товара
+				| На общую сумму 400 р

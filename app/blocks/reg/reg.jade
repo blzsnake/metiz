@@ -1,0 +1,14 @@
+include ../wrapper/wrapper
+
+mixin reg()
+	.reg
+		+wrapper()
+			.reg__left
+				.reg__phone + 7 000 444 33 11
+				.reg__mail mail@mail.ru
+			.reg__right
+				.reg__enter
+					a.reg__enter-link(href=jv0) Войти
+					| &nbsp;или&nbsp;
+					a.reg__enter-link(href=jv0) Зарегистрироваться
+
