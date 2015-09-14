@@ -1,16 +1,19 @@
+include ../prod-list/prod-list
+
 mixin aside-menu (data)
 	.aside-menu&attributes(attributes)
+		+prod-list()
 		.aside-menu__list
 			each item in data
 				.aside-menu__item
-					.aside-menu__item-link=item
+					.aside-menu__item-link.js-prod-list=item
 			.aside-menu__decor
 			.aside-menu__item
-				.aside-menu__item-link.aside-menu__item-link_actions Акционные товары
+				.aside-menu__item-link.aside-menu__item-link_actions.js-prod-list Акционные товары
 			.aside-menu__item
-				.aside-menu__item-link.aside-menu__item-link_actions Товары со скидкой
+				.aside-menu__item-link.aside-menu__item-link_actions.js-prod-list Товары со скидкой
 			.aside-menu__item
-				.aside-menu__item-link.aside-menu__item-link_actions Уцененные товары
+				.aside-menu__item-link.aside-menu__item-link_actions.js-prod-list Уцененные товары
 
 
 

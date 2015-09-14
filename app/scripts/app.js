@@ -30,5 +30,10 @@ $(() => {
 		, nextArrow: '.arrow_popular_next'
 		, infinity: true
 	});
+
+	$('.js-prod-list').on('click', function () {
+		$(this).closest('.aside-menu').toggleClass('is-active');
+		$('.prod-list').toggleClass('is-active');
+	});
 	// Code here
 });

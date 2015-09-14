@@ -1,3 +1,5 @@
+include ../specification/specification
+
 mixin prod()
 	.prod
 		.prod__wrapp
@@ -8,31 +10,30 @@ mixin prod()
 				.prod__art (Арт. 1238567)
 				.prod__price
 					span.prod__price-old 40 000 руб.
-					span.prod__price-new 120 526 руб.
+					span.prod__price-new 120 526,00 руб.
 				.prod__counts
 					.prod__count
 						+input({
 							type: 'text',
 							class: 'input__item_count',
 							name:'count'})(class = 'input_count')
-						.prod__count-text
+						.prod__count-text шт.
 					.prod__count
 						+input({
 							type: 'select',
 							class: 'input__item_select',
-							name:'count'})(class = 'input_select')
-						.prod__count-text
+							name:'select'})(class = 'input_select')
+						.prod__count-text шт/в коробке
 				.prod__btn
 					+input({
 						type: 'button',
-						class: 'input__item_btn',
+						class: 'input__item_basket',
 						name:'buy',
-						value: 'Добавить в корзину'})(class = 'input_buy')
-				.prod__description
-					| Описание товара текст текст текст текст текст текст
-					| текст текст  текст текс текс текс текс текс текаст
-					| текст текс текст текс текс текс текс текст текст
-					| ьтекст текс текст текст ьтексттекс
-					| текст текст ьтексттекс текст текст ьтексттекс текст
-					| текст ьтексттекс текст текст ьтексттекс текст текст ьтекст
+						value: 'Добавить в корзину'})
+
 		.prod__wrapp
+			+title() Характеристики
+			+specification([{name:'Другие названия товара',value:'KSI 40'},{name: 'Мощность (лс)',value: '1'},
+		{name: 'Тип',value: 'Кусторез'},{name: 'Мощность',value: '750Вт'},{name: 'Вес нетто',value: '5,3 кг'}
+		,{name: 'Тип двигателя',value: 'Бензиновый'} ,{name: 'Ширина обработки',value: '615 мл'},
+		{name: 'Бак',value: '0,46 л'},{name: 'Вес брутто',value: '7,2 кг'}])

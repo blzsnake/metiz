@@ -1,0 +1,6 @@
+mixin specification(data)
+	.specification&attributes(attributes)
+		each item in data
+			.specification__row
+				.specification__name=item.name
+				.specification__value=item.value

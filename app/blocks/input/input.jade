@@ -1,11 +1,24 @@
 mixin input(data)
-	.input&attributes(attributes)
-		input.input__item(
-			class=data.class
-			type=data.type
-			name=data.name
-			placeholder=data.place
-			value=data.value)
-		.input__plus +
-		.input__minus -
 
+	if data.name !== 'select'
+		.input&attributes(attributes)
+			input.input__item(
+				class=data.class
+				type=data.type
+				name=data.name
+				placeholder=data.place
+				value=data.value)
+
+			if data.name === 'count'
+				.input__plus.js-count +
+				.input__minus.js-count -
+	else
+		.input&attributes(attributes)
+			select.select__item(
+				class=data.class
+				name=data.name
+				value=data.value)
+				option 100
+				option 200
+				option 300
+				option 400
