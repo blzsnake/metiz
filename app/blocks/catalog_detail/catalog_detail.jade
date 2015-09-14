@@ -1,0 +1,41 @@
+include ../menu/menu
+include ../main-slider/main-slider
+include ../subtitle/subtitle
+include ../heading/heading
+include ../list/list
+include ../col/col
+include ../prod/prod
+include ../our-partners/our-partners
+include ../aside-menu/aside-menu
+include ../title/title
+include ../breadcrumbs/breadcrumbs
+
+- var prod-list = ['Ноутбуки и планшеты', 'Компьютеры и периферия', 'Комплектующие для пк',
+'Телефоны и смарт часы', 'Телевизоры и медиа', 'Игры и приставки', 'Аудиотехника'
+,'Фото и видеоаппаратура', 'Офисаня техника и мебель', 'Автотовары', 'Встраиваемая техника',
+'Техника для кухни', 'Красота и здоровье', 'Товары для дома', 'Инструменты']
+mixin catalog_detail()
+	+menu()
+	+breadcrumbs(['Главная', 'Каталог', 'Бензопила', 'Пила Дружба'])
+	.content
+		+col()
+			+col()(class='col_aside')
+				+aside-menu(['Ноутбуки и планшеты', 'Компьютеры и периферия', 'Комплектующие для пк',
+'Телефоны и смарт часы', 'Телевизоры и медиа', 'Игры и приставки', 'Аудиотехника'
+,'Фото и видеоаппаратура', 'Офисная техника и мебель', 'Автотовары', 'Встраиваемая техника',
+'Техника для кухни', 'Красота и здоровье', 'Товары для дома', 'Инструменты'])
+			+col()(class='col_aside col_pad')
+				+prod()
+		//- +main-slider('arrow_main')(id='mainSlider')
+		//- +firms()
+		//- +title() Акции и распродажи
+		//- +col()
+		//- 	+goods-slider('arrow_sales')(id='salesSlider')
+		//- +title() Новинки
+		//- +col()
+		//- 	+goods-slider('arrow_news')(id='newsSlider')
+		//- +title() Популярный товар
+		//- +col()
+		//- 	+goods-slider('arrow_popular')(id='popularSlider')
+		//- +col()
+		//- 	+our-partners()

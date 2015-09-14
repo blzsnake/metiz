@@ -1,4 +1,11 @@
 mixin input(data)
 	.input&attributes(attributes)
-		input.input__item(type='text' name=data.name placeholder=data.place)
+		input.input__item(
+			class=data.class
+			type=data.type
+			name=data.name
+			placeholder=data.place
+			value=data.value)
+		.input__plus +
+		.input__minus -
 

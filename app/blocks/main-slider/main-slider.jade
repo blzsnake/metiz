@@ -1,0 +1,20 @@
+include ../arrow/arrow
+include ../pagination/pagination
+
+
+mixin main-slider(arrow)
+	.main-slider
+		.main-slider__container&attributes(attributes)
+			.main-slider__item
+				img.main-slider__img(src='assets/images/main_slider_img1.jpg')
+			.main-slider__item
+				img.main-slider__img(src='assets/images/main_slider_img1.jpg')
+			.main-slider__item
+				img.main-slider__img(src='assets/images/main_slider_img1.jpg')
+			.main-slider__item
+				img.main-slider__img(src='assets/images/main_slider_img1.jpg')
+			.main-slider__item
+				img.main-slider__img(src='assets/images/main_slider_img1.jpg')
+		+arrow(arrow+'_prev')
+		+arrow(arrow+'_next')
+		+pagination(5)

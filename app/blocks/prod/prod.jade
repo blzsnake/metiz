@@ -1,0 +1,38 @@
+mixin prod()
+	.prod
+		.prod__wrapp
+			.prod__img
+				img(src='assets/images/prod.jpg')
+			.prod__info
+				.prod__title Наименование товара
+				.prod__art (Арт. 1238567)
+				.prod__price
+					span.prod__price-old 40 000 руб.
+					span.prod__price-new 120 526 руб.
+				.prod__counts
+					.prod__count
+						+input({
+							type: 'text',
+							class: 'input__item_count',
+							name:'count'})(class = 'input_count')
+						.prod__count-text
+					.prod__count
+						+input({
+							type: 'select',
+							class: 'input__item_select',
+							name:'count'})(class = 'input_select')
+						.prod__count-text
+				.prod__btn
+					+input({
+						type: 'button',
+						class: 'input__item_btn',
+						name:'buy',
+						value: 'Добавить в корзину'})(class = 'input_buy')
+				.prod__description
+					| Описание товара текст текст текст текст текст текст
+					| текст текст  текст текс текс текс текс текс текаст
+					| текст текс текст текс текс текс текс текст текст
+					| ьтекст текс текст текст ьтексттекс
+					| текст текст ьтексттекс текст текст ьтексттекс текст
+					| текст ьтексттекс текст текст ьтексттекс текст текст ьтекст
+		.prod__wrapp

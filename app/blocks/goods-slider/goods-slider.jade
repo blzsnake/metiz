@@ -1,0 +1,86 @@
+include ../arrow/arrow
+include ../input/input
+
+mixin goods-slider(arrow)
+	.goods-slider
+		.goods-slider__container&attributes(attributes)
+			.goods-slider__item
+				img.goods-slider__img(src='assets/images/goods_slider.jpg')
+				.goods-slider__title Бензопила THDL
+				.goods-slider__text
+					| краткое описание
+					| текст текст текст текст текст
+				.goods-slider__price 777,00 руб.
+				.goods-slider__btn
+					+input({
+						type: 'button',
+						class: 'input__item_btn',
+						name:'buy',
+						value: 'Купить'})(class = 'input_buy')
+			.goods-slider__item
+				img.goods-slider__img(src='assets/images/goods_slider.jpg')
+				.goods-slider__title Бензопила THDL
+				.goods-slider__text
+					| краткое описание
+					| текст текст текст текст текст
+				.goods-slider__price 777,00 руб.
+				.goods-slider__btn
+					+input({
+						type: 'button',
+						class: 'input__item_btn',
+						name:'buy',
+						value: 'Купить'})(class = 'input_buy')
+			.goods-slider__item
+				img.goods-slider__img(src='assets/images/goods_slider.jpg')
+				.goods-slider__title Бензопила THDL
+				.goods-slider__text
+					| краткое описание
+					| текст текст текст текст текст
+				.goods-slider__price 777,00 руб.
+				.goods-slider__btn
+					+input({
+						type: 'button',
+						class: 'input__item_btn',
+						name:'buy',
+						value: 'Купить'})(class = 'input_buy')
+			.goods-slider__item
+				img.goods-slider__img(src='assets/images/goods_slider.jpg')
+				.goods-slider__title Бензопила THDL
+				.goods-slider__text
+					| краткое описание
+					| текст текст текст текст текст
+				.goods-slider__price 777,00 руб.
+				.goods-slider__btn
+					+input({
+						type: 'button',
+						class: 'input__item_btn',
+						name:'buy',
+						value: 'Купить'})(class = 'input_buy')
+			.goods-slider__item
+				img.goods-slider__img(src='assets/images/goods_slider.jpg')
+				.goods-slider__title Бензопила THDL
+				.goods-slider__text
+					| краткое описание
+					| текст текст текст текст текст
+				.goods-slider__price 777,00 руб.
+				.goods-slider__btn
+					+input({
+						type: 'button',
+						class: 'input__item_btn',
+						name:'buy',
+						value: 'Купить'})(class = 'input_buy')
+			.goods-slider__item
+				img.goods-slider__img(src='assets/images/goods_slider.jpg')
+				.goods-slider__title Бензопила THDL
+				.goods-slider__text
+					| краткое описание
+					| текст текст текст текст текст
+				.goods-slider__price 777,00 руб.
+				.goods-slider__btn
+					+input({
+						type: 'button',
+						class: 'input__item_btn',
+						name:'buy',
+						value: 'Купить'})(class = 'input_buy')
+		+arrow(arrow+'_prev')
+		+arrow(arrow+'_next')

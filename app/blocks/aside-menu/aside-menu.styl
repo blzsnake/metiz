@@ -1,0 +1,41 @@
+.aside-menu
+	width 265px
+	border 1px solid #ddd
+	border-top 1px solid #ff6b38
+
+	&__item
+		padding-left 18px
+		border-bottom 1px solid #ff6b38
+
+		&:hover
+			padding-left 5px
+
+
+	&__item-link
+		position relative
+		font-size 12px
+		line-height 45px
+		cursor pointer
+
+		&:hover
+			padding-left 18px
+			border-left 4px solid #ff6b38
+
+		&:after
+			position absolute
+			right 10%
+			top 40%
+			size 9px
+			border-right 3px solid #ff6b38
+			border-bottom 3px solid #ff6b38
+			transform rotate(-45deg)
+			content ''
+
+		&_actions
+			font-size 13px
+			color #2da7e0
+			font-weight 600
+
+	&__decor
+		height 12px
+		background-color #cdcdcd

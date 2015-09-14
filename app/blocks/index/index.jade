@@ -1,37 +1,56 @@
-include ../content/content
-include ../container/container
+include ../menu/menu
+include ../main-slider/main-slider
 include ../subtitle/subtitle
 include ../heading/heading
 include ../list/list
 include ../col/col
 include ../arrow/arrow
-include ../fork/fork
-include ../tree/tree
+include ../our-partners/our-partners
+include ../firms/firms
+include ../title/title
+include ../goods-slider/goods-slider
 
 mixin index()
-	.index
-		+content()
-			.index__group
-				+subtitle() ЧТО ВКЛЮЧЕНО
+	+menu()
+	.content
+		+main-slider('arrow_main')(id='mainSlider')
+		+firms()
+		+title() Акции и распродажи
+		+col()
+			+goods-slider('arrow_sales')(id='salesSlider')
+		+title() Новинки
+		+col()
+			+goods-slider('arrow_news')(id='newsSlider')
+		+title() Популярный товар
+		+col()
+			+goods-slider('arrow_popular')(id='popularSlider')
+		+col()
+			+our-partners()
 
-			+heading() Инструменты:
 
-			.index__group
-				+list(getData('tools'))
+	//- .index
+	//- 	+content()
+	//- 		.index__group
+	//- 			+subtitle() ЧТО ВКЛЮЧЕНО
 
-			.index__group
-				+subtitle() СТРУКТУРА ФАЙЛОВ
+	//- 		+heading() Инструменты:
 
-			+container()
-				+col()
-					+heading() Исходники
-					+tree(getData('sourceTree'))
+	//- 		.index__group
+	//- 			+list(getData('tools'))
 
-				+col()
-					.index__arrow
-						+arrow() Компиляция
+	//- 		.index__group
+	//- 			+subtitle() СТРУКТУРА ФАЙЛОВ
 
-				+col()
-					+heading() Готовые файлы
-					+tree(getData('buildTree'))
+	//- 		+container()
+	//- 			+col()
+	//- 				+heading() Исходники
+	//- 				+tree(getData('sourceTree'))
+
+	//- 			+col()
+	//- 				.index__arrow
+	//- 					+arrow() Компиляция
+
+	//- 			+col()
+	//- 				+heading() Готовые файлы
+	//- 				+tree(getData('buildTree'))
 

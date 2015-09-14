@@ -1,0 +1,31 @@
+.menu
+	height 50px
+	line-height 50px
+	font-size 0
+	&__item
+		padding-left 17px
+		padding-right 55px
+		display inline-block
+		position relative
+		color #fff
+		font-size 18px
+		background-color #f89729
+		text-decoration none
+
+		&:hover
+			background-color #f38126
+
+		&_last
+			padding-right 17px
+			padding-left 10px
+
+		&_sub
+			&::after
+				position absolute
+				top 16px
+				right 21px
+				transform rotate(45deg)
+				size(12px)
+				border-right 2px solid #fff
+				border-bottom 2px solid #fff
+				content ''

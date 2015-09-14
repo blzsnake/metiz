@@ -1,16 +1,57 @@
 .arrow
-	margin-left auto
-	margin-right auto
-	font-size 14px
-	text-align center
-	color #579eda
 
-	&::after
-		margin-left auto
-		margin-right auto
-		display block
+	&_main_prev
+	&_main_next
+		position absolute
+		top 45%
 		sprite $arrow
-		content ''
+		cursor pointer
 
-		+mobile()
-			sprite $arrow-270
+	&_main_next
+		left 2%
+		transform rotate(180deg)
+
+	&_main_prev
+		right 2%
+
+	&_sales_prev
+	&_sales_next
+	&_news_next
+	&_news_prev
+	&_popular_next
+	&_popular_prev
+		position absolute
+		top 0
+		height 100%
+		width 67px
+		background-color #e4e4e4
+		cursor pointer
+		transition color .5s ease
+
+		&:after
+			position absolute
+			top 45%
+			size 24px
+			display inline-block
+			border-right 4px solid #fff
+			border-bottom 4px solid #fff
+			content ''
+
+		&:hover
+			background-color #f89729
+
+	&_sales_prev
+	&_news_prev
+	&_popular_prev
+		left 0
+		&:after
+			left 40%
+			transform rotate(135deg)
+
+	&_sales_next
+	&_news_next
+	&_popular_next
+		right 0
+		&:after
+			right 40%
+			transform rotate(-45deg)

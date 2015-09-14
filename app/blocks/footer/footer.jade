@@ -1,8 +1,32 @@
-include ../fork/fork
-include ../dark/dark
+include ../partners/partners
 
 mixin footer()
 	.footer
-		+dark()
-			.footer__copyright
-				| ©felixexter, 2013&mdash;2015
+		+wrapper()
+			.footer__logo
+				img.footer__logo-img(src='assets/images/footer_logo.png')
+			.footer__news
+				.footer__news-title Подпишись на новости
+				+input({
+					type: 'email',
+					name:'email',
+					place: 'Ваш e-mail'})(class = 'input_mail')
+				.footer__copyright
+					| Copyright (c) Билдинг Про, 2015
+					| Сайт создан в ReTOR
+			.footer__search
+				.footer__list
+					a.footer__list-item(href=jv0) Компания
+					a.footer__list-item(href=jv0) Оплата и доставка
+					a.footer__list-item(href=jv0) Новости
+					a.footer__list-item(href=jv0) Статьи
+				+input({
+					type: 'text',
+					name:'search',
+					place: 'Поиск..'})(class = 'input_search')
+				+partners()
+			.footer__contacts
+				.footer__contacts-phone 8-800-700-50-60
+				.footer__contacts-mail почта@mail.ru
+				.footer__contacts-text Мы работаем с 9:00 до 18:00
+				.footer__contacts-pays
