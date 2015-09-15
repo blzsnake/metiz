@@ -1,7 +1,7 @@
 .prod
 	padding-top 15px
 	padding-left 15px
-	padding-bottom 28px
+	width 860px
 	background-color #f9f9f9
 	font-size 16px
 
@@ -44,9 +44,49 @@
 		margin-top 20px
 		margin-bottom 30px
 
+	&__card
 	&__count
 	&__count-text
 		display inline-block
 
 	&__description
 		max-width 350px
+
+	&__card
+		margin-right 15px
+		margin-bottom 15px
+		border 1px solid #e1e1e1
+		&:nth-child(n*3)
+			margin-right 0
+
+	&__card-img
+		display block
+		width 260px
+
+	&__card-cat
+		margin 7px 0
+		padding-left 21px
+		font-size 12px
+		color #8e8e8f
+
+	&__card-info
+		padding-top 5px
+		padding-left 10px
+		padding-right 10px
+		padding-bottom 10px
+		display inline-block
+		background-color #e1e1e1
+
+	&__card-title
+		font-size 16px
+
+	&__card-price
+
+		.prod__price-old
+			margin-right 10px
+			color #3a3a3c
+
+		.prod__price-new
+			font-size 19px
+			color #3a3a3c
+

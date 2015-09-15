@@ -1,18 +1,11 @@
 include ../menu/menu
-include ../main-slider/main-slider
-include ../subtitle/subtitle
-include ../heading/heading
-include ../list/list
 include ../col/col
 include ../prod/prod
-include ../our-partners/our-partners
 include ../aside-menu/aside-menu
-include ../title/title
 include ../breadcrumbs/breadcrumbs
-include ../specification/specification
 
 
-mixin catalog_detail(data)
+mixin catalog-list(data)
 	+menu()
 	+breadcrumbs(data)
 	.content
@@ -23,5 +16,4 @@ mixin catalog_detail(data)
 		,'Фото и видеоаппаратура', 'Офисаня техника и мебель', 'Автотовары', 'Встраиваемая техника',
 		'Техника для кухни', 'Красота и здоровье', 'Товары для дома', 'Инструменты'])
 			+col()(class='col_aside col_pad')
-				+prod()
-
+				+prod('list')

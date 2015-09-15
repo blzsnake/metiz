@@ -4,7 +4,8 @@ extends ../blocks/layout-default/layout-default
 
 block head
 	- pageTitle = 'Metiz Catalog';
+	- breadcrumbs = ['Главная', 'Каталог', 'Бензопила', 'Пила Дружба'];
 
 block content
 
-	+catalog_detail()
+	+catalog_detail(breadcrumbs)

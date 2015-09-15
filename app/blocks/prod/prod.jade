@@ -1,39 +1,175 @@
 include ../specification/specification
+include ../filter/filter
+include ../numbers/numbers
 
-mixin prod()
-	.prod
-		.prod__wrapp
-			.prod__img
-				img(src='assets/images/prod.jpg')
-			.prod__info
-				.prod__title Наименование товара
-				.prod__art (Арт. 1238567)
-				.prod__price
-					span.prod__price-old 40 000 руб.
-					span.prod__price-new 120 526,00 руб.
-				.prod__counts
-					.prod__count
-						+input({
-							type: 'text',
-							class: 'input__item_count',
-							name:'count'})(class = 'input_count')
-						.prod__count-text шт.
-					.prod__count
-						+input({
-							type: 'select',
-							class: 'input__item_select',
-							name:'select'})(class = 'input_select')
-						.prod__count-text шт/в коробке
-				.prod__btn
-					+input({
-						type: 'button',
-						class: 'input__item_basket',
-						name:'buy',
-						value: 'Добавить в корзину'})
 
-		.prod__wrapp
-			+title() Характеристики
-			+specification([{name:'Другие названия товара',value:'KSI 40'},{name: 'Мощность (лс)',value: '1'},
-		{name: 'Тип',value: 'Кусторез'},{name: 'Мощность',value: '750Вт'},{name: 'Вес нетто',value: '5,3 кг'}
-		,{name: 'Тип двигателя',value: 'Бензиновый'} ,{name: 'Ширина обработки',value: '615 мл'},
-		{name: 'Бак',value: '0,46 л'},{name: 'Вес брутто',value: '7,2 кг'}])
+mixin prod(data)
+	if !data
+		.prod
+			.prod__wrapp
+				.prod__img
+					img(src='assets/images/prod.jpg')
+				.prod__info
+					.prod__title Наименование товара
+					.prod__art (Арт. 1238567)
+					.prod__price
+						span.prod__price-old 40 000 руб.
+						span.prod__price-new 120 526,00 руб.
+					.prod__counts
+						.prod__count
+							+input({
+								type: 'text',
+								class: 'input__item_count',
+								name:'count'})(class = 'input_count')
+							.prod__count-text шт.
+						.prod__count
+							+input({
+								type: 'select',
+								class: 'input__item_select',
+								name:'select'})(class = 'input_select')
+							.prod__count-text шт/в коробке
+					.prod__btn
+						+input({
+							type: 'button',
+							class: 'input__item_basket',
+							name:'buy',
+							value: 'Добавить в корзину'})
+
+			.prod__wrapp
+				+title() Характеристики
+				+specification([{name:'Другие названия товара',value:'KSI 40'},{name: 'Мощность (лс)',value: '1'},
+			{name: 'Тип',value: 'Кусторез'},{name: 'Мощность',value: '750Вт'},{name: 'Вес нетто',value: '5,3 кг'}
+			,{name: 'Тип двигателя',value: 'Бензиновый'} ,{name: 'Ширина обработки',value: '615 мл'},
+			{name: 'Бак',value: '0,46 л'},{name: 'Вес брутто',value: '7,2 кг'}])
+	else
+		.prod
+			+filter()
+			.prod__wrapp
+					.prod__card
+						img.prod__card-img(src='assets/images/prod.jpg')
+						.prod__card-info
+							.prod__card-title Наименование товара
+							.prod__card-cat категория и подкатегория товара
+							.prod__card-price
+								span.prod__price-old 40 000 руб.
+								span.prod__price-new 120 526,00 руб.
+						.prod__card-btn
+							+input({
+								type: 'button',
+								class: 'input__item_basket input__item_card',
+								name:'buy',
+								value: 'В корзину'})(class='input_card-btn')
+
+					.prod__card
+						img.prod__card-img(src='assets/images/prod.jpg')
+						.prod__card-info
+							.prod__card-title Наименование товара
+							.prod__card-cat категория и подкатегория товара
+							.prod__card-price
+								span.prod__price-old 40 000 руб.
+								span.prod__price-new 120 526,00 руб.
+						.prod__card-btn
+							+input({
+								type: 'button',
+								class: 'input__item_basket input__item_card',
+								name:'buy',
+								value: 'В корзину'})(class='input_card-btn')
+					.prod__card
+						img.prod__card-img(src='assets/images/prod.jpg')
+						.prod__card-info
+							.prod__card-title Наименование товара
+							.prod__card-cat категория и подкатегория товара
+							.prod__card-price
+								span.prod__price-old 40 000 руб.
+								span.prod__price-new 120 526,00 руб.
+						.prod__card-btn
+							+input({
+								type: 'button',
+								class: 'input__item_basket input__item_card',
+								name:'buy',
+								value: 'В корзину'})(class='input_card-btn')
+					.prod__card
+						img.prod__card-img(src='assets/images/prod.jpg')
+						.prod__card-info
+							.prod__card-title Наименование товара
+							.prod__card-cat категория и подкатегория товара
+							.prod__card-price
+								span.prod__price-old 40 000 руб.
+								span.prod__price-new 120 526,00 руб.
+						.prod__card-btn
+							+input({
+								type: 'button',
+								class: 'input__item_basket input__item_card',
+								name:'buy',
+								value: 'В корзину'})(class='input_card-btn')
+					.prod__card
+						img.prod__card-img(src='assets/images/prod.jpg')
+						.prod__card-info
+							.prod__card-title Наименование товара
+							.prod__card-cat категория и подкатегория товара
+							.prod__card-price
+								span.prod__price-old 40 000 руб.
+								span.prod__price-new 120 526,00 руб.
+						.prod__card-btn
+							+input({
+								type: 'button',
+								class: 'input__item_basket input__item_card',
+								name:'buy',
+								value: 'В корзину'})(class='input_card-btn')
+					.prod__card
+						img.prod__card-img(src='assets/images/prod.jpg')
+						.prod__card-info
+							.prod__card-title Наименование товара
+							.prod__card-cat категория и подкатегория товара
+							.prod__card-price
+								span.prod__price-old 40 000 руб.
+								span.prod__price-new 120 526,00 руб.
+						.prod__card-btn
+							+input({
+								type: 'button',
+								class: 'input__item_basket input__item_card',
+								name:'buy',
+								value: 'В корзину'})(class='input_card-btn')
+					.prod__card
+						img.prod__card-img(src='assets/images/prod.jpg')
+						.prod__card-info
+							.prod__card-title Наименование товара
+							.prod__card-cat категория и подкатегория товара
+							.prod__card-price
+								span.prod__price-old 40 000 руб.
+								span.prod__price-new 120 526,00 руб.
+						.prod__card-btn
+							+input({
+								type: 'button',
+								class: 'input__item_basket input__item_card',
+								name:'buy',
+								value: 'В корзину'})(class='input_card-btn')
+					.prod__card
+						img.prod__card-img(src='assets/images/prod.jpg')
+						.prod__card-info
+							.prod__card-title Наименование товара
+							.prod__card-cat категория и подкатегория товара
+							.prod__card-price
+								span.prod__price-old 40 000 руб.
+								span.prod__price-new 120 526,00 руб.
+						.prod__card-btn
+							+input({
+								type: 'button',
+								class: 'input__item_basket input__item_card',
+								name:'buy',
+								value: 'В корзину'})(class='input_card-btn')
+					.prod__card
+						img.prod__card-img(src='assets/images/prod.jpg')
+						.prod__card-info
+							.prod__card-title Наименование товара
+							.prod__card-cat категория и подкатегория товара
+							.prod__card-price
+								span.prod__price-old 40 000 руб.
+								span.prod__price-new 120 526,00 руб.
+						.prod__card-btn
+							+input({
+								type: 'button',
+								class: 'input__item_basket input__item_card',
+								name:'buy',
+								value: 'В корзину'})(class='input_card-btn')
+			+numbers()

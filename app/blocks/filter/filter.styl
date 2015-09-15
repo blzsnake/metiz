@@ -1,0 +1,52 @@
+.filter
+	margin-bottom 14px
+	font-size 14px
+	text-transform uppercase
+
+	&__text
+	&__type-wrapp
+	&__type
+	&__view
+		position relative
+		display inline-block
+
+	&__type-wrapp
+		margin 0 50px
+
+	&__type
+		padding-right 44px
+		padding-left 8px
+		line-height 25px
+		background-color #e1e1e1
+
+		&_price
+			margin 0 16px
+			color #fff
+			background-color #f89729
+
+			.filter__toggle_up
+				border-color transparent transparent #fff transparent
+
+			.filter__toggle_down
+				border-color #fff transparent transparent transparent
+
+
+	&__toggle
+		position absolute
+		cursor pointer
+
+		&_up
+		&_down
+			top 9px
+			size 0
+			border-style solid
+
+		&_up
+			right 25px
+			border-width 0 5px 6px 5px
+			border-color transparent transparent #3a3a3c transparent
+
+		&_down
+			right 10px
+			border-width 6px 5px 0  5px
+			border-color #3a3a3c transparent transparent transparent
