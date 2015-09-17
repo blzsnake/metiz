@@ -1,0 +1,21 @@
+include ../menu/menu
+include ../numbers/numbers
+include ../post-list/post-list
+include ../col/col
+include ../aside-menu/aside-menu
+include ../title/title
+include ../breadcrumbs/breadcrumbs
+
+mixin post(postTitle, btns)
+	+menu()
+	.content
+		+col()
+			+title()=postTitle
+			.post
+				.post__content
+				.post__btn-wrap
+					.post__btn-left
+						a.post__btn(href=jv0)=btns[0]
+					.post__btn-right
+						a.post__btn(href=jv0)=btns[1]
+

@@ -1,0 +1,13 @@
+include ../blocks/news/news
+
+extends ../blocks/layout-default/layout-default
+
+block head
+	- var pageTitle = 'Metiz Posts';
+	- var breadcrumbs = ['Главная', 'Статьи'];
+	- var postObj = {img: 'assets/images/posts_img.jpg', title :'Название статьи', detail :'/posts-detailed.html'};
+	- var postData = [postObj, postObj, postObj, postObj, postObj];
+	- var postTitle = 'Статьи';
+
+block content
+	+news(breadcrumbs, postData, postTitle)

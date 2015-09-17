@@ -1,0 +1,15 @@
+mixin post-list(data)
+	.post-list
+		each item in data
+			.post-list__item
+				img.post-list__img(src=item.img)
+				.post-list__info
+					.post-list__data 16.12.2015
+					.post-list__title=item.title
+					.post-list__text
+						| Аннотация краткое содержание текст текст текст текст
+						| текст текст текст текст текст текст текст текст текст текст текст текст
+						| текст текст текст текст текст текст текст текст текст текст текст
+						| текст текст текст текст текст текст текст текст текст текст текст текст текст ...
+					.post-list__wrapp
+						a.post-list__detailed(href=item.detail) Подробнее...

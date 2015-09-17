@@ -1,0 +1,11 @@
+include ../blocks/post/post
+
+extends ../blocks/layout-default/layout-default
+
+block head
+	- var pageTitle = 'Metiz News';
+	- var postTitle = 'Важная новость';
+	- var btns = ['Прошлая новость', 'Следующая новость'];
+
+block content
+	+post(postTitle, btns)

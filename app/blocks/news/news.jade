@@ -1,0 +1,16 @@
+include ../menu/menu
+include ../numbers/numbers
+include ../post-list/post-list
+include ../col/col
+include ../aside-menu/aside-menu
+include ../title/title
+include ../breadcrumbs/breadcrumbs
+
+mixin news(data, postData, title)
+	+menu()
+	+breadcrumbs(data)
+	.content
+		+col()
+			+title()=title
+			+post-list(postData)
+			+numbers()
