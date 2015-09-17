@@ -37,7 +37,6 @@ gulp.task('styles', () => (
 			'Safari >= ' + browsers.safari
 		))
 		.pipe(gulpif(!gutil.env.debug, cmq()))
-		.pipe(gulpif(!gutil.env.debug, minifyCss()))
 		.pipe(gulpif(gutil.env.csscomb, csscomb()))
 		.pipe(rename({suffix: '.min'}))
 		.pipe(gulp.dest(paths.styles))
