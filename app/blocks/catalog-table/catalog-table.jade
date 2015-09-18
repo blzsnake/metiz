@@ -1,0 +1,19 @@
+include ../menu/menu
+include ../col/col
+include ../prod/prod
+include ../aside-menu/aside-menu
+include ../breadcrumbs/breadcrumbs
+
+
+mixin catalog-list(data)
+	+menu()
+	+breadcrumbs(data)
+	.content
+		+col()
+			+col()(class='col_aside')
+				+aside-menu(['Ноутбуки и планшеты', 'Компьютеры и периферия', 'Комплектующие для пк',
+		'Телефоны и смарт часы', 'Телевизоры и медиа', 'Игры и приставки', 'Аудиотехника'
+		,'Фото и видеоаппаратура', 'Офисаня техника и мебель', 'Автотовары', 'Встраиваемая техника',
+		'Техника для кухни', 'Красота и здоровье', 'Товары для дома', 'Инструменты'])
+			+col()(class='col_aside col_pad')
+				+prod('table')

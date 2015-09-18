@@ -41,7 +41,8 @@ mixin prod(data)
 			{name: 'Тип',value: 'Кусторез'},{name: 'Мощность',value: '750Вт'},{name: 'Вес нетто',value: '5,3 кг'}
 			,{name: 'Тип двигателя',value: 'Бензиновый'} ,{name: 'Ширина обработки',value: '615 мл'},
 			{name: 'Бак',value: '0,46 л'},{name: 'Вес брутто',value: '7,2 кг'}])
-	else
+
+	else if data === 'list'
 		.prod
 			+filter()
 			.prod__wrapp
