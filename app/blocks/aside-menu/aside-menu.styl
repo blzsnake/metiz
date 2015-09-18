@@ -1,15 +1,23 @@
 .aside-menu
 	position relative
 	width 265px
+	height 860px
 	border 1px solid #ddd
 	border-top 1px solid #ff6b38
+	transition height .6s ease
+
+	&.is-collapsed
+		height 0
+		overflow hidden
+		transition height .6s ease
 
 	&__item
 		padding-left 18px
 		border-bottom 1px solid #ff6b38
+		background-color #fff
 
 		&:hover
-			padding-left 5px
+			border-left 4px solid #ff6b38
 
 
 	&__item-link
@@ -19,8 +27,8 @@
 		cursor pointer
 
 		&:hover
-			padding-left 18px
-			border-left 4px solid #ff6b38
+			color #ff6b38
+
 
 		&:after
 			position absolute

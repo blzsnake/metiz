@@ -35,5 +35,9 @@ $(() => {
 		$(this).closest('.aside-menu').toggleClass('is-active');
 		$('.prod-list').toggleClass('is-active');
 	});
+
+	$('.js-toggle-menu').on('click', function () {
+		$('.js-aside-menu').toggleClass('is-collapsed');
+	});
 	// Code here
 });

@@ -1,6 +1,6 @@
-mixin menu()
+mixin menu(data)
 	.menu&attributes(attributes)
-		a.menu__item.menu__item_sub(href=jv0) Каталог продукции
+		a.menu__item.menu__item_sub.is-active(href=jv0 class= data ? data : '') Каталог продукции
 		a.menu__item(href=jv0 target='_blank') Компания
 		a.menu__item(href=jv0 target='_blank') Оплата и доставка
 		a.menu__item(href='/news.html' target='_blank') Новости

@@ -2,7 +2,7 @@ include ../menu/menu
 include ../main-slider/main-slider
 include ../subtitle/subtitle
 include ../heading/heading
-include ../list/list
+include ../aside-menu/aside-menu
 include ../col/col
 include ../arrow/arrow
 include ../our-partners/our-partners
@@ -11,8 +11,13 @@ include ../title/title
 include ../goods-slider/goods-slider
 
 mixin index()
-	+menu()
+	+menu('js-toggle-menu')
 	.content
+		+col()(class='col_absolute')
+			+aside-menu(['Ноутбуки и планшеты', 'Компьютеры и периферия', 'Комплектующие для пк',
+				'Телефоны и смарт часы', 'Телевизоры и медиа', 'Игры и приставки', 'Аудиотехника'
+				,'Фото и видеоаппаратура', 'Офисная техника и мебель', 'Автотовары', 'Встраиваемая техника',
+				'Техника для кухни', 'Красота и здоровье', 'Товары для дома', 'Инструменты'])(class='is-collapsed js-aside-menu')
 		+main-slider('arrow_main')(id='mainSlider')
 		+firms()
 		+title() Акции и распродажи
@@ -26,31 +31,3 @@ mixin index()
 			+goods-slider('arrow_popular')(id='popularSlider')
 		+col()
 			+our-partners()
-
-
-	//- .index
-	//- 	+content()
-	//- 		.index__group
-	//- 			+subtitle() ЧТО ВКЛЮЧЕНО
-
-	//- 		+heading() Инструменты:
-
-	//- 		.index__group
-	//- 			+list(getData('tools'))
-
-	//- 		.index__group
-	//- 			+subtitle() СТРУКТУРА ФАЙЛОВ
-
-	//- 		+container()
-	//- 			+col()
-	//- 				+heading() Исходники
-	//- 				+tree(getData('sourceTree'))
-
-	//- 			+col()
-	//- 				.index__arrow
-	//- 					+arrow() Компиляция
-
-	//- 			+col()
-	//- 				+heading() Готовые файлы
-	//- 				+tree(getData('buildTree'))
-
