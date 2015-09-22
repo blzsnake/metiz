@@ -6,7 +6,7 @@ mixin aside-menu (data)
 		.aside-menu__list
 			each item in data
 				.aside-menu__item
-					.aside-menu__item-link.js-prod-list=item
+					a.aside-menu__item-link.js-prod-list(href='/catalog_list.html')=item
 			.aside-menu__decor
 			.aside-menu__item
 				.aside-menu__item-link.aside-menu__item-link_actions.js-prod-list Акционные товары

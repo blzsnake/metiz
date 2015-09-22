@@ -31,9 +31,18 @@ $(() => {
 		, infinity: true
 	});
 
-	$('.js-prod-list').on('click', function () {
-		$(this).closest('.aside-menu').toggleClass('is-active');
-		$('.prod-list').toggleClass('is-active');
+	$('.js-prod-list').on('mouseover', function () {
+		setTimeout(function () {
+			$(this).closest('.aside-menu').addClass('is-active');
+			$('.prod-list').addClass('is-active');
+		}, 200);
+	});
+
+	$(document).on('mouseover', function (e) {
+		if (!$(e.target).closest('.prod-list').length) {
+			$(this).closest('.prod-list').removeClass('is-active');
+			$('.prod-list').removeClass('is-active');
+		}
 	});
 
 	$('.js-toggle-menu').on('click', function () {
