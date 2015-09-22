@@ -45,7 +45,7 @@ mixin prod(data)
 	else if data === 'list'
 		.prod
 			+filter()
-			.prod__wrapp
+			.prod__wrapp.is-active
 					.prod__card
 						img.prod__card-img(src='assets/images/prod.jpg')
 						.prod__card-info
