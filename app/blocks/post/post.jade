@@ -7,7 +7,7 @@ include ../title/title
 include ../breadcrumbs/breadcrumbs
 
 mixin post(postTitle, btns)
-	+menu()
+	+menu('js-toggle-menu')
 	.content
 		+col()
 			+title()=postTitle

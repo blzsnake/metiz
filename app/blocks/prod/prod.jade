@@ -1,12 +1,13 @@
 include ../specification/specification
 include ../filter/filter
 include ../numbers/numbers
+include ../table/table
 
 
 mixin prod(data)
 	if !data
 		.prod
-			.prod__wrapp
+			.prod__wrapp.is-active
 				.prod__img
 					img(src='assets/images/prod.jpg')
 				.prod__info
@@ -35,7 +36,7 @@ mixin prod(data)
 							name:'buy',
 							value: 'Добавить в корзину'})
 
-			.prod__wrapp
+			.prod__wrapp.is-active
 				+title() Характеристики
 				+specification([{name:'Другие названия товара',value:'KSI 40'},{name: 'Мощность (лс)',value: '1'},
 			{name: 'Тип',value: 'Кусторез'},{name: 'Мощность',value: '750Вт'},{name: 'Вес нетто',value: '5,3 кг'}
@@ -45,7 +46,7 @@ mixin prod(data)
 	else if data === 'list'
 		.prod
 			+filter()
-			.prod__wrapp.is-active
+			.prod__wrapp.js-prod-wrapp#list
 					.prod__card
 						img.prod__card-img(src='assets/images/prod.jpg')
 						.prod__card-info
@@ -173,4 +174,7 @@ mixin prod(data)
 								class: 'input__item_basket input__item_card',
 								name:'buy',
 								value: 'В корзину'})(class='input_card-btn')
+
+				.prod__wrapp.js-prod-wrapp.is-active#table
+					+table()
 			+numbers()

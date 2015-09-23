@@ -1,0 +1,23 @@
+mixin row(data)
+
+		.row&attributes(attributes)
+			each item in data
+				if item.mod === 'controls'
+					.row__cell.row__cell(class='row__cell_' + item.mod)
+						+input({
+							type: 'text',
+							class: 'input__item_count',
+							name:'count'})(class = 'input_count')
+						| по
+						+input({
+							type: 'select',
+							class: 'input__item_select',
+							name:'select'})(class = 'input_select')
+						+input({
+							type: 'button',
+							class: 'input__item_btn',
+							name:'buy',
+							value: 'Купить'})(class = 'input_buy')
+
+				else
+					.row__cell.row__cell(class='row__cell_' + item.mod)=item.val

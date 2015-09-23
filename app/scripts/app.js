@@ -43,10 +43,22 @@ $(() => {
 			$(this).closest('.prod-list').removeClass('is-active');
 			$('.prod-list').removeClass('is-active');
 		}
+	}).on('click', function(e) {
+		if (!$(e.target).closest('.aside-menu').length && !$('.is-collapsed').length && !$(e.target).closest('.js-toggle-menu')) {
+			$(this).closest('.prod-list').removeClass('is-active');
+			$('.js-aside-menu').toggleClass('is-collapsed');
+		}
 	});
 
 	$('.js-toggle-menu').on('click', function () {
 		$('.js-aside-menu').toggleClass('is-collapsed');
 	});
-	// Code here
+
+	$('.js-toggle-list').on('click', function () {
+		var $this = $(this);
+		$('.js-toggle-list').removeClass('is-active');
+		$('.js-prod-wrapp').removeClass('is-active');
+		$this.addClass('is-active');
+		$('#' + $this.data().type).addClass('is-active');
+	});
 });

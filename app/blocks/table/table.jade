@@ -1,0 +1,17 @@
+include ../row/row
+
+mixin table()
+	-var i = 0;
+	-var dataHead = [{'mod': 'art', 'val': 'Артикул'},{'mod': 'name', 'val': 'Наименование товара'},{'mod': 'description', 'val': 'Описание товара'},{'mod': 'price', 'val': 'Цена(руб)'},{'mod': 'quant', 'val': 'Кол.'},{'mod': 'package', 'val': 'Упаковка'}];
+	-var data = [{'mod': 'art', 'val': '1234654'},{'mod': 'name', 'val': 'Бензопила ПРВ-650'},{'mod': 'description', 'val': 'текст текст текст текст текст текст текст текст текст текст текст текст текст'},{'mod': 'price', 'val': '120 000,00'},{'mod': 'controls', 'val': ''}];
+	.table
+		+row(dataHead)(class='row_head')
+		+row(data)
+		+row(data)
+		+row(data)
+		+row(data)
+		+row(data)
+		+row(data)
+		+row(data)
+		+row(data)
+		+row(data)

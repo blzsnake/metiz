@@ -11,7 +11,7 @@
 		display inline-block
 
 	&__type-wrapp
-		margin 0 50px
+		margin 0 40px
 
 	&__type
 		padding-right 44px
@@ -50,3 +50,31 @@
 			right 10px
 			border-width 6px 5px 0  5px
 			border-color #3a3a3c transparent transparent transparent
+
+		&_list
+		&_table
+			position relative
+			margin-left 5px
+			display inline-block
+			size 18px
+			font-family FontAwesome
+			font-size 18px
+			vertical-align bottom
+
+			&:after
+				position absolute
+				size 100%
+				color #aeaeae
+
+			&.is-active
+			&:hover
+				&:after
+					color #f89729
+		&_table
+			&:after
+				content "\f00b"
+
+		&_list
+			&:after
+				content "\f00a"
+
